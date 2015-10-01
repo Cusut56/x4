@@ -1,4 +1,4 @@
-int r,g,b;
+it r,g,b;
 float button1X=100, button1Y=100, button1W=80, button1H=40;
 int counter=0;
 
@@ -6,7 +6,7 @@ int counter=0;
 void setup() {
 size(640,480);
 reset();
-
+rectMode(CENTER);
 }
 void reset(){
 r=100;
@@ -18,7 +18,7 @@ void draw(){
   background(r,g,b);
 rect(button1X,button1Y,button1W,button1H);
   fill(150,10,10);
-    text("click me!",100+80/4,100+40*2/3);
+    text("click me!",60+100/4,80+40*2/3);
     fill(200,200,10);
 }
 void showbutton(float x, float y, float w,float h){
@@ -30,7 +30,7 @@ if (key=='q') exit();
 if (key=='r') reset();
 }
 void mousePressed(){
-  if( hit (mouseX,mouseY,100,100,50,50) ){
+  if( hit (mouseX,mouseY,button1X,button1Y,button1W/2,button1H/2) ){
     counter=counter+1;
     if (counter %2>0){
       r=255;
