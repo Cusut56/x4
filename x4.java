@@ -1,4 +1,4 @@
-it r,g,b;
+int r,g,b;
 float button1X=100, button1Y=100, button1W=80, button1H=40;
 int counter=0;
 
